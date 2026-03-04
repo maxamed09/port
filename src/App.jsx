@@ -34,10 +34,8 @@ const SERVICES = [
 ];
 
 const PROJECTS = [
-    { title: 'E-Commerce Platform', category: 'Full Stack', desc: 'A modern e-commerce platform with real-time inventory, payment integration, and admin dashboard.', tech: ['React', 'Node.js', 'MongoDB', 'Stripe'], color: '#818cf8' },
-    { title: 'Task Management App', category: 'Web App', desc: 'Collaborative task management tool with drag-and-drop boards, real-time updates, and team features.', tech: ['Next.js', 'Prisma', 'PostgreSQL', 'Socket.io'], color: '#a78bfa' },
-    { title: 'AI Chat Interface', category: 'AI/ML', desc: 'An intelligent chat interface powered by LLMs with context awareness and multi-modal capabilities.', tech: ['Python', 'FastAPI', 'React', 'OpenAI'], color: '#c084fc' },
-    { title: 'Portfolio Generator', category: 'SaaS', desc: 'A SaaS platform that generates beautiful developer portfolios from GitHub profiles automatically.', tech: ['Vite', 'Tailwind', 'Supabase', 'Vercel'], color: '#e879f9' },
+    { title: 'Task Management Dashboard', category: 'Mobile App', desc: 'A comprehensive project management mobile app with dashboard analytics, task lists, team collaboration, and real-time project statistics.', tech: ['React Native', 'Node.js', 'MongoDB', 'Chart.js'], color: '#818cf8', image: '/image.png' },
+    { title: 'Nexio AI Assistant', category: 'AI Platform', desc: 'An intelligent AI assistant platform with multi-agent support, content generation, market analysis, and seamless chat interface powered by GPT-5 and Deepseek.', tech: ['React', 'Python', 'FastAPI', 'OpenAI'], color: '#a78bfa', image: '/image copy.png' },
 ];
 
 const STATS = [
@@ -461,7 +459,7 @@ function App() {
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {PROJECTS.map(({ title, category, desc, tech, color }, i) => (
+                        {PROJECTS.map(({ title, category, desc, tech, color, image }, i) => (
                             <motion.div
                                 key={title}
                                 variants={fadeUp}
@@ -469,19 +467,23 @@ function App() {
                                 whileHover={{ y: -6, transition: { duration: 0.3 } }}
                                 className="glass-card rounded-2xl overflow-hidden glow-border group"
                             >
-                                {/* Color bar */}
-                                <div className="h-1" style={{ background: `linear-gradient(to right, ${color}, transparent)` }} />
+                                {/* Project Image */}
+                                <div className="relative h-52 sm:h-64 overflow-hidden">
+                                    <img
+                                        src={image}
+                                        alt={title}
+                                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/40 to-transparent" />
+                                    <span className="absolute top-4 left-4 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full" style={{ color, backgroundColor: `${color}25` }}>
+                                        {category}
+                                    </span>
+                                    <motion.a href="#" whileHover={{ scale: 1.2, rotate: -15 }} className="absolute top-4 right-4 text-zinc-300 hover:text-indigo-400 transition-colors bg-black/30 backdrop-blur-sm p-2 rounded-lg">
+                                        <ExternalLink size={16} />
+                                    </motion.a>
+                                </div>
 
                                 <div className="p-6 sm:p-8">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <span className="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full" style={{ color, backgroundColor: `${color}15` }}>
-                                            {category}
-                                        </span>
-                                        <motion.a href="#" whileHover={{ scale: 1.2, rotate: -15 }} className="text-zinc-500 group-hover:text-indigo-400 transition-colors">
-                                            <ExternalLink size={18} />
-                                        </motion.a>
-                                    </div>
-
                                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors">{title}</h3>
                                     <p className="text-sm text-zinc-400 leading-relaxed mb-5">{desc}</p>
 

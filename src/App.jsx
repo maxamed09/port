@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import {
-    Github, Linkedin, Twitter, Mail, ArrowRight, ExternalLink,
+    Github, Linkedin, Mail, ArrowRight, ExternalLink,
     Menu, X, Code2, Palette, Smartphone, Globe, Send,
     MapPin, Phone, ChevronUp, Sparkles, Star, Zap
 } from 'lucide-react';
@@ -21,10 +21,9 @@ const transition = { duration: 0.6, ease: [0.22, 1, 0.36, 1] };
 const NAV = ['Home', 'About', 'Services', 'Projects', 'Contact'];
 
 const SOCIAL = [
-    { Icon: Github, href: '#', label: 'GitHub' },
-    { Icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { Icon: Twitter, href: '#', label: 'Twitter' },
-    { Icon: Mail, href: '#', label: 'Email' },
+    { Icon: Github, href: 'https://github.com/maxamed09', label: 'GitHub' },
+    { Icon: Linkedin, href: 'https://www.linkedin.com/in/mohamed-hassan-abdikarin', label: 'LinkedIn' },
+    { Icon: Mail, href: 'mailto:maxamedaxmed103667@gmail.com', label: 'Email' },
 ];
 
 const SERVICES = [
@@ -513,9 +512,9 @@ function App() {
                         {/* Left: info cards */}
                         <motion.div variants={fadeLeft} transition={transition} className="lg:col-span-2 space-y-5">
                             {[
-                                { icon: Mail, label: 'Email', value: 'mohamed@email.com', href: 'mailto:mohamed@email.com' },
-                                { icon: Phone, label: 'Phone', value: '+1 234 567 890', href: 'tel:+1234567890' },
-                                { icon: MapPin, label: 'Location', value: 'City, Country', href: '#' },
+                                { icon: Mail, label: 'Email', value: 'maxamedaxmed103667@gmail.com', href: 'mailto:maxamedaxmed103667@gmail.com' },
+                                { icon: Phone, label: 'Phone', value: '+91 8557812973', href: 'tel:+918557812973' },
+                                { icon: MapPin, label: 'Location', value: 'Khajurla, Punjab', href: '#' },
                             ].map(({ icon: Icon, label, value, href }) => (
                                 <motion.a
                                     key={label}

@@ -12,22 +12,22 @@
   body {
     @apply m-0 p-0 antialiased;
     font-family: 'Inter', sans-serif;
-    background: #0a0a0f;
+    background: #09090b;
     color: #e4e4e7;
     overflow-x: hidden;
   }
 
   ::selection {
-    background: rgba(99, 102, 241, 0.4);
+    background: rgba(34, 211, 238, 0.25);
     color: #fff;
   }
 
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #0a0a0f;
+    background: #09090b;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -46,16 +46,21 @@
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, #818cf8, #6366f1, #a78bfa);
+    background: linear-gradient(135deg, #22d3ee, #06b6d4, #67e8f9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .glass-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(16px);
+  }
+
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(34, 211, 238, 0.1);
   }
 
   .glow-border {
@@ -68,7 +73,7 @@
     inset: -1px;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), transparent, rgba(167, 139, 250, 0.3));
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.25), transparent, rgba(6, 182, 212, 0.2));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -76,23 +81,7 @@
   }
 
   .hero-gradient {
-    background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.15), transparent);
-  }
-
-  .floating {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  @keyframes float {
-
-    0%,
-    100% {
-      transform: translateY(0px);
-    }
-
-    50% {
-      transform: translateY(-12px);
-    }
+    background: radial-gradient(ellipse 70% 50% at 50% -20%, rgba(6, 182, 212, 0.08), transparent);
   }
 
   .pulse-glow {
@@ -103,11 +92,11 @@
 
     0%,
     100% {
-      box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.1);
     }
 
     50% {
-      box-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
+      box-shadow: 0 0 40px rgba(6, 182, 212, 0.2);
     }
   }
 }

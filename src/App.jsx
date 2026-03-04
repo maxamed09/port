@@ -27,15 +27,15 @@ const SOCIAL = [
 ];
 
 const SERVICES = [
-    { icon: Code2, title: 'Web Development', desc: 'Building scalable and performant web applications using modern frameworks like React, Next.js, and Node.js.', color: '#818cf8' },
-    { icon: Palette, title: 'UI/UX Design', desc: 'Crafting intuitive, accessible, and visually stunning interfaces that users love to interact with.', color: '#a78bfa' },
-    { icon: Smartphone, title: 'Mobile Apps', desc: 'Cross-platform mobile development with React Native, delivering native-quality experiences on iOS and Android.', color: '#c084fc' },
-    { icon: Globe, title: 'API & Backend', desc: 'Designing robust RESTful APIs and microservices architectures with security and scalability in mind.', color: '#e879f9' },
+    { icon: Code2, title: 'Web Development', desc: 'Building scalable and performant web applications using modern frameworks like React, Next.js, and Node.js.', color: '#22d3ee' },
+    { icon: Palette, title: 'UI/UX Design', desc: 'Crafting intuitive, accessible, and visually stunning interfaces that users love to interact with.', color: '#2dd4bf' },
+    { icon: Smartphone, title: 'Mobile Apps', desc: 'Cross-platform mobile development with React Native, delivering native-quality experiences on iOS and Android.', color: '#34d399' },
+    { icon: Globe, title: 'API & Backend', desc: 'Designing robust RESTful APIs and microservices architectures with security and scalability in mind.', color: '#38bdf8' },
 ];
 
 const PROJECTS = [
-    { title: 'Task Management Dashboard', category: 'Mobile App', desc: 'A comprehensive project management mobile app with dashboard analytics, task lists, team collaboration, and real-time project statistics.', tech: ['React Native', 'Node.js', 'MongoDB', 'Chart.js'], color: '#818cf8', image: '/image.png' },
-    { title: 'Nexio AI Assistant', category: 'AI Platform', desc: 'An intelligent AI assistant platform with multi-agent support, content generation, market analysis, and seamless chat interface powered by GPT-5 and Deepseek.', tech: ['React', 'Python', 'FastAPI', 'OpenAI'], color: '#a78bfa', image: '/image copy.png' },
+    { title: 'Task Management Dashboard', category: 'Mobile App', desc: 'A comprehensive project management mobile app with dashboard analytics, task lists, team collaboration, and real-time project statistics.', tech: ['React Native', 'Node.js', 'MongoDB', 'Chart.js'], color: '#22d3ee', image: '/image.png' },
+    { title: 'Nexio AI Assistant', category: 'AI Platform', desc: 'An intelligent AI assistant platform with multi-agent support, content generation, market analysis, and seamless chat interface powered by GPT-5 and Deepseek.', tech: ['React', 'Python', 'FastAPI', 'OpenAI'], color: '#2dd4bf', image: '/image copy.png' },
 ];
 
 const STATS = [
@@ -128,17 +128,17 @@ function App() {
     };
 
     return (
-        <div className="min-h-screen bg-[#0a0a0f] overflow-x-hidden">
+        <div className="min-h-screen bg-[#09090b] overflow-x-hidden">
 
             {/* ── Scroll Progress Bar ── */}
-            <motion.div className="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 z-[200]" style={{ width: progressWidth }} />
+            <motion.div className="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-cyan-500 via-teal-500 to-sky-500 z-[200]" style={{ width: progressWidth }} />
 
             {/* ══════════ NAVBAR ══════════ */}
             <motion.nav
                 initial={{ y: -80 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.6 }}
-                className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled ? 'bg-[#0a0a0f]/80 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-black/20' : ''}`}
+                className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled ? 'bg-[#09090b]/80 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-black/20' : ''}`}
             >
                 <div className="max-w-7xl mx-auto section-padding flex items-center justify-between h-16 sm:h-20">
                     {/* Logo */}
@@ -170,7 +170,7 @@ function App() {
                         onClick={() => scrollTo('Contact')}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.97 }}
-                        className="hidden md:flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors"
+                        className="hidden md:flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors"
                     >
                         Let's Talk <ArrowRight size={14} />
                     </motion.button>
@@ -190,7 +190,7 @@ function App() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: '100%' }}
                         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                        className="fixed inset-0 z-[150] bg-[#0a0a0f]/95 backdrop-blur-2xl flex flex-col"
+                        className="fixed inset-0 z-[150] bg-[#09090b]/95 backdrop-blur-2xl flex flex-col"
                     >
                         <div className="flex justify-between items-center px-5 h-16">
                             <span className="text-2xl font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
@@ -219,7 +219,7 @@ function App() {
 
                         <div className="flex justify-center gap-6 pb-10">
                             {SOCIAL.map(({ Icon, href, label }) => (
-                                <a key={label} href={href} className="text-zinc-400 hover:text-indigo-400 transition-colors">
+                                <a key={label} href={href} className="text-zinc-400 hover:text-cyan-400 transition-colors">
                                     <Icon size={20} />
                                 </a>
                             ))}
@@ -264,7 +264,7 @@ function App() {
                                 onClick={() => scrollTo('Projects')}
                                 whileHover={{ scale: 1.04, boxShadow: '0 0 30px rgba(99,102,241,0.4)' }}
                                 whileTap={{ scale: 0.97 }}
-                                className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-7 py-3.5 rounded-full transition-all text-sm"
+                                className="flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white font-semibold px-7 py-3.5 rounded-full transition-all text-sm"
                             >
                                 View My Work <ArrowRight size={16} />
                             </motion.button>
@@ -302,7 +302,7 @@ function App() {
                     >
                         <div className="relative">
                             {/* Ambient glow behind image */}
-                            <div className="absolute -inset-6 bg-gradient-to-tr from-indigo-600/15 via-purple-500/10 to-pink-500/15 blur-3xl rounded-3xl pulse-glow" />
+                            <div className="absolute -inset-6 bg-gradient-to-tr from-cyan-600/15 via-teal-500/10 to-sky-500/15 blur-3xl rounded-3xl pulse-glow" />
 
                             {/* Decorative accent — bottom-left dot pattern */}
                             <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 grid grid-cols-3 gap-1.5 z-0">
@@ -311,7 +311,7 @@ function App() {
                                         key={i}
                                         animate={{ opacity: [0.3, 0.7, 0.3] }}
                                         transition={{ duration: 2, repeat: Infinity, delay: i * 0.15 }}
-                                        className="w-1.5 h-1.5 rounded-full bg-indigo-400"
+                                        className="w-1.5 h-1.5 rounded-full bg-cyan-400"
                                     />
                                 ))}
                             </div>
@@ -319,14 +319,14 @@ function App() {
                             {/* Image container — rounded rectangle */}
                             <div className="relative w-72 h-80 sm:w-80 sm:h-[380px] lg:w-[400px] lg:h-[480px] rounded-3xl overflow-hidden glow-border z-10">
                                 {/* Gradient overlay at bottom for fade effect */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/60 via-transparent to-transparent z-10 pointer-events-none" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#09090b]/60 via-transparent to-transparent z-10 pointer-events-none" />
                                 <img
                                     src="/ChatGPT Image Mar 4, 2026, 02_43_43 PM.png"
                                     alt="Mohamed"
                                     className="w-full h-full object-cover object-top"
                                     onError={(e) => {
                                         e.target.style.display = 'none';
-                                        e.target.parentElement.innerHTML = '<div class="w-full h-full bg-gradient-to-br from-indigo-900 to-purple-900 flex items-center justify-center"><span class="text-6xl sm:text-8xl font-bold gradient-text" style="font-family: Space Grotesk, sans-serif">M</span></div>';
+                                        e.target.parentElement.innerHTML = '<div class="w-full h-full bg-gradient-to-br from-cyan-900 to-teal-900 flex items-center justify-center"><span class="text-6xl sm:text-8xl font-bold gradient-text" style="font-family: Space Grotesk, sans-serif">M</span></div>';
                                     }}
                                 />
                             </div>
@@ -346,7 +346,7 @@ function App() {
                                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
                                 className="absolute -left-3 sm:-left-8 bottom-16 sm:bottom-20 glass-card rounded-xl px-3 py-2 sm:px-4 sm:py-3 flex items-center gap-2 z-20"
                             >
-                                <Star size={16} className="text-indigo-400" />
+                                <Star size={16} className="text-cyan-400" />
                                 <span className="text-xs sm:text-sm font-semibold text-white whitespace-nowrap">50+ Projects</span>
                             </motion.div>
                         </div>
@@ -360,7 +360,7 @@ function App() {
 
                     {/* Section header */}
                     <motion.div variants={fadeUp} transition={transition} className="text-center mb-16">
-                        <span className="text-indigo-400 text-sm font-semibold uppercase tracking-widest">About Me</span>
+                        <span className="text-cyan-400 text-sm font-semibold uppercase tracking-widest">About Me</span>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                             Know Who <span className="gradient-text">I Am</span>
                         </h2>
@@ -395,7 +395,7 @@ function App() {
                             <motion.a
                                 href="#"
                                 whileHover={{ scale: 1.04 }}
-                                className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm"
+                                className="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm"
                             >
                                 Download CV <ArrowRight size={15} />
                             </motion.a>
@@ -416,10 +416,10 @@ function App() {
             </Section>
 
             {/* ══════════ 3. SERVICES ══════════ */}
-            <Section id="Services" className="py-20 sm:py-28 section-padding bg-gradient-to-b from-transparent via-indigo-950/10 to-transparent">
+            <Section id="Services" className="py-20 sm:py-28 section-padding bg-gradient-to-b from-transparent via-cyan-950/10 to-transparent">
                 <div className="max-w-7xl mx-auto">
                     <motion.div variants={fadeUp} transition={transition} className="text-center mb-16">
-                        <span className="text-indigo-400 text-sm font-semibold uppercase tracking-widest">What I Do</span>
+                        <span className="text-cyan-400 text-sm font-semibold uppercase tracking-widest">What I Do</span>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                             My <span className="gradient-text">Services</span>
                         </h2>
@@ -452,7 +452,7 @@ function App() {
             <Section id="Projects" className="py-20 sm:py-28 section-padding">
                 <div className="max-w-7xl mx-auto">
                     <motion.div variants={fadeUp} transition={transition} className="text-center mb-16">
-                        <span className="text-indigo-400 text-sm font-semibold uppercase tracking-widest">Portfolio</span>
+                        <span className="text-cyan-400 text-sm font-semibold uppercase tracking-widest">Portfolio</span>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                             Featured <span className="gradient-text">Projects</span>
                         </h2>
@@ -474,17 +474,17 @@ function App() {
                                         alt={title}
                                         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/40 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-[#09090b]/40 to-transparent" />
                                     <span className="absolute top-4 left-4 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full" style={{ color, backgroundColor: `${color}25` }}>
                                         {category}
                                     </span>
-                                    <motion.a href="#" whileHover={{ scale: 1.2, rotate: -15 }} className="absolute top-4 right-4 text-zinc-300 hover:text-indigo-400 transition-colors bg-black/30 backdrop-blur-sm p-2 rounded-lg">
+                                    <motion.a href="#" whileHover={{ scale: 1.2, rotate: -15 }} className="absolute top-4 right-4 text-zinc-300 hover:text-cyan-400 transition-colors bg-black/30 backdrop-blur-sm p-2 rounded-lg">
                                         <ExternalLink size={16} />
                                     </motion.a>
                                 </div>
 
                                 <div className="p-6 sm:p-8">
-                                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors">{title}</h3>
+                                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">{title}</h3>
                                     <p className="text-sm text-zinc-400 leading-relaxed mb-5">{desc}</p>
 
                                     <div className="flex flex-wrap gap-2">
@@ -500,10 +500,10 @@ function App() {
             </Section>
 
             {/* ══════════ 5. CONTACT ══════════ */}
-            <Section id="Contact" className="py-20 sm:py-28 section-padding bg-gradient-to-b from-transparent via-indigo-950/10 to-transparent">
+            <Section id="Contact" className="py-20 sm:py-28 section-padding bg-gradient-to-b from-transparent via-cyan-950/10 to-transparent">
                 <div className="max-w-7xl mx-auto">
                     <motion.div variants={fadeUp} transition={transition} className="text-center mb-16">
-                        <span className="text-indigo-400 text-sm font-semibold uppercase tracking-widest">Get In Touch</span>
+                        <span className="text-cyan-400 text-sm font-semibold uppercase tracking-widest">Get In Touch</span>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                             Let's Work <span className="gradient-text">Together</span>
                         </h2>
@@ -524,7 +524,7 @@ function App() {
                                     whileHover={{ x: 6 }}
                                     className="flex items-center gap-4 glass-card rounded-xl p-5 glow-border group"
                                 >
-                                    <div className="w-11 h-11 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-500/20 transition-colors flex-shrink-0">
+                                    <div className="w-11 h-11 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-500/20 transition-colors flex-shrink-0">
                                         <Icon size={20} />
                                     </div>
                                     <div>
@@ -541,7 +541,7 @@ function App() {
                                         key={label}
                                         href={href}
                                         whileHover={{ y: -4, backgroundColor: 'rgba(99,102,241,0.15)' }}
-                                        className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-indigo-400 transition-all"
+                                        className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-cyan-400 transition-all"
                                     >
                                         <Icon size={18} />
                                     </motion.a>
@@ -562,7 +562,7 @@ function App() {
                                     <input
                                         type="text"
                                         placeholder="Mohamed"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/20 transition-all"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/20 transition-all"
                                     />
                                 </div>
                                 <div>
@@ -570,7 +570,7 @@ function App() {
                                     <input
                                         type="email"
                                         placeholder="hello@example.com"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/20 transition-all"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/20 transition-all"
                                     />
                                 </div>
                             </div>
@@ -580,7 +580,7 @@ function App() {
                                 <input
                                     type="text"
                                     placeholder="Project discussion"
-                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/20 transition-all"
+                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/20 transition-all"
                                 />
                             </div>
 
@@ -589,7 +589,7 @@ function App() {
                                 <textarea
                                     rows={5}
                                     placeholder="Tell me about your project..."
-                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/20 transition-all resize-none"
+                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/20 transition-all resize-none"
                                 />
                             </div>
 
@@ -597,7 +597,7 @@ function App() {
                                 type="submit"
                                 whileHover={{ scale: 1.03, boxShadow: '0 0 30px rgba(99,102,241,0.4)' }}
                                 whileTap={{ scale: 0.97 }}
-                                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-3.5 rounded-full transition-colors text-sm"
+                                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white font-semibold px-8 py-3.5 rounded-full transition-colors text-sm"
                             >
                                 Send Message <Send size={15} />
                             </motion.button>
@@ -614,7 +614,7 @@ function App() {
                     </p>
                     <div className="flex gap-5">
                         {SOCIAL.map(({ Icon, href, label }) => (
-                            <a key={label} href={href} className="text-zinc-500 hover:text-indigo-400 transition-colors">
+                            <a key={label} href={href} className="text-zinc-500 hover:text-cyan-400 transition-colors">
                                 <Icon size={16} />
                             </a>
                         ))}
@@ -630,7 +630,7 @@ function App() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 20 }}
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                        className="fixed bottom-6 right-6 w-11 h-11 rounded-full bg-indigo-600/80 backdrop-blur-sm text-white flex items-center justify-center shadow-lg hover:bg-indigo-500 transition-colors z-50"
+                        className="fixed bottom-6 right-6 w-11 h-11 rounded-full bg-cyan-600/80 backdrop-blur-sm text-white flex items-center justify-center shadow-lg hover:bg-cyan-500 transition-colors z-50"
                     >
                         <ChevronUp size={20} />
                     </motion.button>
